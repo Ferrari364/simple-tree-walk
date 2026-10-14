@@ -1,0 +1,17 @@
+{
+  "name": "simple-tree-walk",
+  "version": "0.1.0",
+  "description": "Deterministic depth-first traversal of JavaScript tree objects with pruning support.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
