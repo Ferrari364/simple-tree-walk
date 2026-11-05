@@ -33,3 +33,10 @@ The one interpretation chosen: the decision to descend is governed by `shouldVis
 - Siblings are sorted by `name` using a plain less-than comparison on strings. Identically named siblings keep their original relative order because the sort comparator returns 0, and `Array.prototype.sort` is stable in modern engines.
 - The `children` array is never mutated; `sortChildren` returns a fresh sorted copy.
 - An empty `children: []` array is a valid subtree that simply contributes no descendants — the node itself is still visited.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
